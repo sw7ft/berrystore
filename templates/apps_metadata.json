@@ -1,0 +1,22 @@
+{
+    "tools": {
+        "debian": {
+            "description": "Debian No Root allows you to run Debian Linux on your Android device.",
+            "icon": "/static/debian-icon.png"
+        },
+        "app1": {
+            "description": "App1 is a useful tool for managing your files.",
+            "icon": "/static/app1-icon.png"
+        }
+    },
+    "games": {
+        "game1": {
+            "description": "Game1 is a fun puzzle game with challenging levels.",
+            "icon": "/static/game1-icon.png"
+        },
+        "game2": {
+            "description": "Game2 is a thrilling action-packed adventure game.",
+            "icon": "/static/game2-icon.png"
+        }
+    }
+}

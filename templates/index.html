@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BerryStore.org</title>
+
+    <!-- Link to external CSS file -->
+    <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+    <div class="top-bar">
+        <div class="title">BerryStore.org</div>
+        <div class="icon-container">
+            <button class="nav-icon" onclick="toggleNav()">☰</button>
+            <button class="search-icon" onclick="showSearch()">🔍</button>
+        </div>
+    </div>
+
+    <div class="side-nav" id="sideNav">
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Categories</a></li>
+            <li><a href="#">Top Charts</a></li>
+            <li><a href="#">My Apps</a></li>
+            <li><a href="#">Settings</a></li>
+        </ul>
+    </div>
+
+    <div class="slider"></div>
+
+    <div class="subheading">
+        <h4>Featured Apps</h4>
+    </div>
+
+    <!-- Placeholder for dynamic app content -->
+    <div id="apps-content">
+        {{apps_content}}
+    </div>
+
+    <div class="lightbox" id="lightbox">
+        <div class="lightbox-content">
+            <span class="lightbox-close" onclick="hideLightbox()">&times;</span>
+            <div class="app-details">
+                <div class="app-name" id="lightbox-app-name"></div>
+                <div class="app-info-download">
+                    <div class="app-info" id="lightbox-app-info"></div>
+                    <a href="#" class="app-download">Download</a> <!-- Download link here -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function showLightbox(appName, appInfo, downloadUrl) {
+            var lightbox = document.getElementById('lightbox');
+            lightbox.style.display = 'block';
+            document.getElementById('lightbox-app-name').textContent = appName;
+            document.getElementById('lightbox-app-info').textContent = appInfo;
+
+            // Update the download link with the correct URL
+            var downloadLink = lightbox.querySelector('.app-download');
+            downloadLink.href = downloadUrl;
+        }
+
+        function hideLightbox() {
+            document.getElementById('lightbox').style.display = 'none';
+        }
+
+        function showSearch() {
+            alert("Search functionality not implemented yet.");
+        }
+
+        function toggleNav() {
+            document.getElementById('sideNav').classList.toggle('open');
+        }
+    </script>
+</body>
+</html>
